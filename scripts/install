@@ -185,7 +185,7 @@ while [[ $# -gt 0 ]] ; do
   token="$1" ; shift
   case "$token" in
     --auto)    rvm_auto_flag=1 ;;
-    --prefix)  rvm_prefix="$1" ; shift ;;
+    --prefix)  rvm_prefix="$1" ; unset rvm_path; shift ;;
     --version) rvm_path="$PWD" ; __rvm_version ; unset rvm_path ; exit ;;
     --debug)
       set -o verbose
